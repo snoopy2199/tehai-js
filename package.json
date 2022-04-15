@@ -1,4 +1,8 @@
 {
   "name": "tehai-js",
-  "packageManager": "yarn@3.2.0"
+  "packageManager": "yarn@3.2.0",
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.2",
+    "typescript": "^4.6.3"
+  }
 }
