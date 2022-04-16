@@ -1,6 +1,6 @@
 class TeHai {
   hi(): void {
-    console.log('TeHai🀄');
+    console.log("TeHai🀄");
   }
 }
 
