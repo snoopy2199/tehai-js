@@ -1,12 +1,18 @@
 {
   "name": "tehai-js",
   "packageManager": "yarn@3.2.0",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "umd:main": "dist/index.umd.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "postinstall": "husky install",
     "prepack": "pinst --disable",
     "postpack": "pinst --enable",
     "test": "jest",
-    "coverage": "jest --collectCoverage"
+    "coverage": "jest --collectCoverage",
+    "declaration": "tsc src/index.ts --declaration --declarationMap --emitDeclarationOnly --declarationDir dist",
+    "build": "rollup --config && yarn declaration"
   },
   "lint-staged": {
     "*.{js,ts}": "eslint --fix",
@@ -19,6 +25,7 @@
     "@types/jest": "^27.4.1",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
+    "esbuild": "^0.14.36",
     "eslint": "^8.13.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
@@ -29,6 +36,8 @@
     "lint-staged": "^12.3.8",
     "pinst": "^3.0.0",
     "prettier": "2.6.2",
+    "rollup": "^2.70.2",
+    "rollup-plugin-esbuild": "^4.9.1",
     "ts-jest": "^27.1.4",
     "typescript": "^4.6.3"
   }
