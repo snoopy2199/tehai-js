@@ -13,10 +13,5 @@
   },
   "plugins": ["@typescript-eslint"],
   "rules": {},
-  "ignorePatterns": [
-    "dist",
-    "jest.config.js",
-    "commitlint.config.js",
-    "rollup.config.js"
-  ]
+  "ignorePatterns": ["coverage", "dist"]
 }

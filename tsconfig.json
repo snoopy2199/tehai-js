@@ -3,5 +3,10 @@
   "compilerOptions": {
     "lib": ["dom", "es2021"]
   },
-  "include": ["src/**/*"]
+  "include": [
+    "src/**/*",
+    "jest.config.js",
+    "commitlint.config.js",
+    "rollup.config.js"
+  ]
 }
