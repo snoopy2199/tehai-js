@@ -1,1 +1,1 @@
-# tehai-js
+# TeHai.js

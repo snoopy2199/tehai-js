@@ -1,5 +1,15 @@
 {
-  "name": "tehai-js",
+  "name": "tehai",
+  "version": "0.0.1",
+  "description": "Mahjong tiles in a player's hand",
+  "license": "MIT",
+  "repository": "https://github.com/snoopy2199/tehai-js",
+  "keywords": [
+    "mahjong",
+    "hairi",
+    "riichi"
+  ],
+  "author": "TSY (https://github.com/snoopy2199)",
   "packageManager": "yarn@3.2.0",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -9,14 +19,17 @@
     "postinstall": "husky install",
     "prepack": "pinst --disable",
     "postpack": "pinst --enable",
+    "lint:type": "tsc --noEmit",
+    "lint:code": "eslint --fix .",
+    "lint:format": "prettier --write --ignore-unknown .",
     "test": "jest",
     "coverage": "jest --collectCoverage",
     "declaration": "tsc src/index.ts --declaration --declarationMap --emitDeclarationOnly --declarationDir dist",
     "build": "rollup --config && yarn declaration"
   },
   "lint-staged": {
-    "*.{js,ts}": "eslint --fix",
-    "**/*": "prettier --write --ignore-unknown"
+    "*.{js,ts}": "eslint --fix .",
+    "**/*": "prettier --write --ignore-unknown ."
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",

@@ -6125,9 +6125,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tehai-js@workspace:.":
+"tehai@workspace:.":
   version: 0.0.0-use.local
-  resolution: "tehai-js@workspace:."
+  resolution: "tehai@workspace:."
   dependencies:
     "@commitlint/cli": ^16.2.3
     "@commitlint/config-conventional": ^16.2.1
